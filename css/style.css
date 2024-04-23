@@ -342,7 +342,11 @@ footer{
         height: 110px;
         width: 500px;
         color: #fff;
-        margin-left: -500px;
+        margin-left: 100px;
+        margin-top: -100px;
+        transform: translateX(0%);
+        transition-duration: 0.35s;
+        transition-timing-function: ease-in-out;
     }
     .name{
         margin-left: -25px;
@@ -449,13 +453,45 @@ footer{
         font-size: 10px;
     }
     .side{
-        margin-left: 490px;
-        height: 1px;
-        margin-top: -100px;
+        margin-left: -100px;
+        &:hover{
+            .sidebar{
+                transform: translateX(0);
+                transition-duration: 0.35s;
+                transition-timing-function: ease-in-out;
+                
+            }
+        }
+    }
+    .s1_arrow{
+        display: none;
+    }
+    .scroll-arrow{
+        display: none;
     }
     .chart{
         width: 450px;
         height: 450px;
+    }
+    .skill-box{
+        background-color: #5f64f868;
+        width: 175px;
+        height: 150px;
+        border-radius: 10px;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        color: #fff;
+        border: 2px solid #7e7f9a;
+        transform: translateY(0);
+        transition-duration: 0.35s;
+        transition-timing-function: ease-in-out;
+        &:hover{
+            transform: translateY(-5%);
+            transition-duration: 0.35s;
+            transition-timing-function: ease-in-out;
+            color: #ffe4bf;
+        }
     }
     
 }
