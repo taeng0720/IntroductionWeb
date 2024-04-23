@@ -387,7 +387,7 @@ footer{
     }
     .profile{
         width: 500px;
-        margin-left: 200px;
+        margin-left: 275px;
     }
     .Backend{
         margin-top: -30px;
@@ -459,18 +459,36 @@ footer{
             color: #ffe4bf;
         }
     }
-
+    .content{
+        margin-left: -30px;
+    }
+    .box{
+        width: 300px;
+        height: 150px;
+    }
+    h5{
+        margin-top: -10px;
+    }
+    footer{
+        margin-left: -10px;
+    }
+    section{
+        margin-left: 80px;
+    }
 }
 @media (max-width: 450px){
     .sidebar{
         height: 110px;
         width: 500px;
         color: #fff;
-        margin-left: 100px;
+        margin-left: 90px;
         margin-top: -100px;
         transform: translateX(0%);
         transition-duration: 0.35s;
         transition-timing-function: ease-in-out;
+    }
+    .mungtaeng{
+        margin-left: 0px;
     }
     .name{
         margin-left: -25px;
@@ -486,12 +504,13 @@ footer{
         margin: 0;
         margin-top: 100px;
         width: 400px;
-        
     }
     .profile{
         width: 350px;
         text-align: center;
         color: #fff;
+        margin-left: 0px;
+        margin-top: -100px;
     }
     .btn_profile{
         position:absolute;
@@ -565,7 +584,7 @@ footer{
     }
     section{
         color: #ffffff;
-        margin-right: 1000px;
+        margin-left: -100px;
     }
     .chart{
         margin-left: -10px;
@@ -616,6 +635,13 @@ footer{
             transition-timing-function: ease-in-out;
             color: #ffe4bf;
         }
+    }
+    .box{
+        width: 300px;
+        height: 150px;
+    }
+    h5{
+        margin-top: -20px;
     }
     
 }
