@@ -19,6 +19,7 @@ body{
     align-items: center;
     justify-content: flex-start; /* 바의 위쪽 정렬 */
     padding-top: 20px; /* 상단 여백 추가 */
+    transform: translateX(-100%);
     transition-duration: 0.35s;
     transition-timing-function: ease-in-out;
     position: relative;
@@ -32,7 +33,76 @@ body{
     background-color: rgb(0, 0, 28);
     z-index: 10;
     
+    &:hover{
+        .sidebar{
+            transform: translateX(0);
+            transition-duration: 0.35s;
+            transition-timing-function: ease-in-out;
+            
+        }
+    }
+    
 }
+.s1_arrow
+{
+    display:inline-block; 
+    position: fixed; 
+    top:28px; margin-left:-10px; 
+    text-align:center; 
+    animation:arrow_down 1.5s infinite;
+    margin-left: 50px;
+    margin-top: 30%;
+}
+.scroll-arrow {
+    width:16px; 
+    height:16px; 
+    border-right: 3px solid white; 
+    border-bottom: 3px solid white;
+    transform: rotate(0deg); 
+    -webkit-transform: rotate(315deg); 
+    -moz-transform: rotate(0deg); 
+    -o-transform: rotate(0deg);  
+    -ms-transform: rotate(0deg);
+    animation: arrow-wave 1s infinite; 
+    animation-direction: alternate;
+    position: fixed;
+}
+.scroll-arrow:nth-child(1) {
+    animation-delay: 0.1s;
+    margin-left: -50px;
+    
+}
+.scroll-arrow:nth-child(2) {
+    animation-delay: 0.2s;
+    margin-left: -30px;
+}
+.scroll-arrow:nth-child(3) {
+    animation-delay: 0.3s;
+    margin-left: -10px;
+}
+@keyframes arrow-wave {
+0% {
+    opacity: 0;
+}
+50% {
+    opacity: .5;
+}
+100% {
+    opacity: 1;
+}
+}
+@keyframes arrow_down{
+0%{
+    left:28px;
+}
+50%{
+    left:40px;
+}
+100%{
+    left:28px;
+}
+}
+
 .mainMove{
     /*
     &:hover{
