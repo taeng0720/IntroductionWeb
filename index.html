@@ -227,7 +227,7 @@
   
           draw() {
             context.beginPath();
-            context.strokeStyle = '#dfdfdf';
+            context.strokeStyle = '#c0bdffbb';
             context.moveTo(this.x, this.y);
             context.lineTo(this.x, this.y + this.length);
             context.stroke();
@@ -243,8 +243,8 @@
             if (drop.y > canvas.height) {
               drop.y = 0;
               drop.x = Math.random() * canvas.width;
-              drop.speed = Math.random() * 7 + 1;
-              drop.length = Math.random() * 10 + 2;
+              drop.speed = Math.random() * 3 + 1;
+              drop.length = Math.random() * 20 + 5;
             }
   
             drop.draw();
@@ -258,8 +258,8 @@
         for (let i = 0; i < 200; i++) {
           tempX = Math.random() * canvas.width;
           tempY = Math.random() * canvas.height;
-          tempSpeed = Math.random() * 5 + 1;
-          tempLength = Math.random() * 5 + 2;
+          tempSpeed = Math.random() * 2 + 1;
+          tempLength = Math.random() * 20 + 2;
   
           drops.push(new Drop(i, tempX, tempY, tempSpeed, tempLength));
         }
