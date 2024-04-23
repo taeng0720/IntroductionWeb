@@ -69,8 +69,58 @@
             <h3>Skills</h3>
         </section>
         <div class="skills">
+            <div class="mungtaeng">
+                <div class="skill-box">
+                    <h2>Unity</h2>
+                    <h3 style="margin-left: -10px ;">2020.5.23~</h3>
+                </div>
+                <div class="skill-box">
+                    <h2>C#</h2>
+                    <h3 style="margin-left: -10px ;">2020.6.01~</h3>
+                </div>
+                <div class="skill-box">
+                    <h2>C</h2>
+                    <h3 style="margin-left: -10px ;">2023.01.10~</h3>
+                    <br>
+                </div>
+            </div>
+            <div class="mungtaeng">
+                <div class="skill-box">
+                    <h2>Html</h2>
+                    <h3 style="margin-left: -10px ;">2023.08.10~</h3>
+                    <br>
+                    
+                </div>
+                    <div class="skill-box">
+                    <h2>Css</h2>
+                    <h3 style="margin-left: -10px ;">2023.08.10~</h3>
+                    <br>
+                </div>
+                <div class="skill-box">
+                    <h2>Js</h2>
+                    <h3 style="margin-left: -10px ;">2023.09.01~</h3>
+                    <br>
+                </div>
+            </div>
+            <div class="mungtaeng">
+                <div class="skill-box">
+                    <h2>Java</h2>
+                    <h3 style="margin-left: -10px ;">2023.10.5~</h3>
+                    <br>
+                    
+                </div>
+                    <div class="skill-box">
+                    <h2>SpringBoot</h2>
+                    <h3 style="margin-left: -10px ;">2023.10.30~</h3>
+                    <br>
+                </div>
+                <div class="skill-box">
+                    <h2>vue.js</h2>
+                    <h3 style="margin-left: -10px ;">2023.04.17~</h3>
+                    <br>
+                </div>
+            </div>
         </div>
-        <canvas class="chart" id="doughnut-chart"  style="height:50vh; width:80vw"></canvas>
         <br><br><br><br><br><br>
         
         <!-- 포트폴리오 섹션 -->
@@ -174,38 +224,6 @@
         
     </footer>
 </div>
-    <script>
-        new Chart(document.getElementById("doughnut-chart"), {
-            type: 'doughnut',
-            data: {
-                labels: ["Unity", "SpringBoot", "Java", "Html","css", "Js", "C", "C#","Cpp"],
-                datasets: [
-                    {
-                        label: "Population (millions)",
-                        backgroundColor: ["#ff8d8d", "#ffcc8d","#ffff8d","#bbff8d","#8dffcc","#8deeff","#8dbbff","#8d98ff","#c28dff"],
-                        data: [20,20,15,13,12,10,8,2,1]
-                    }
-                ]
-            },
-            options: {
-                title: {
-                    display: true,
-                    
-                    text: 'frequency of use of skills',
-                    fontSize:15,
-                    fontColor:"white"
-                },
-                responsive: false,
-                legend: {
-                    
-                    labels: {
-                        fontColor: "#ababab",
-                        fontSize: 15
-                    }
-                }
-            }
-        });
-    </script>
     <script>
         const canvas = document.querySelector('.rainCanvas');
         const context = canvas.getContext('2d');
