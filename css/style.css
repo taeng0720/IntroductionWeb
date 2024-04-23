@@ -19,11 +19,9 @@ body{
     align-items: center;
     justify-content: flex-start; /* 바의 위쪽 정렬 */
     padding-top: 20px; /* 상단 여백 추가 */
-    transform: translateX(-100%);
     transition-duration: 0.35s;
     transition-timing-function: ease-in-out;
     position: relative;
-    z-index: 10000;
 }
 .side{
     height: 1000px;
@@ -31,14 +29,6 @@ body{
     position: fixed;
     margin-left: -10px;
     background-color: rgb(0, 0, 28);
-    &:hover{
-        .sidebar{
-            transform: translateX(0);
-            transition-duration: 0.35s;
-            transition-timing-function: ease-in-out;
-            
-        }
-    }
     
 }
 .mainMove{
