@@ -1,0 +1,370 @@
+body{
+    background-color: #00000d;
+    min-width: 1000px; /* 최소 너비 */
+        min-height: 300px; /* 최소 높이 */
+        overflow:visible;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 1;
+        
+}
+.sidebar {
+    top: 0;
+    left: 0;
+    height: 120%;
+    width:200px;
+    background-color: #0d0000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 바의 위쪽 정렬 */
+    padding-top: 20px; /* 상단 여백 추가 */
+    transform: translateX(-100%);
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+    position: relative;
+    z-index: 10000;
+}
+.side{
+    height: 1000px;
+    width:100px;
+    position: fixed;
+    margin-left: -10px;
+    background-color: rgb(0, 0, 28);
+    &:hover{
+        .sidebar{
+            transform: translateX(0);
+            transition-duration: 0.35s;
+            transition-timing-function: ease-in-out;
+            
+        }
+    }
+    
+}
+.mainMove{
+    /*
+    &:hover{
+        .content{
+            transform: translateX(-20%);
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+        }
+    }
+    */
+
+}
+
+.sub{
+    margin-top: -15px;
+}
+
+/* 프로필 이미지 스타일 */
+.profile-img {
+    width:150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+.profile-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+.Introduce{
+    color: #a1a2bc;
+    font-weight:100px;
+    font-family:sans-serif;
+    font-size: x-large;
+    transform: translateY(0);
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+    &:hover{
+        transform: translateY(-5%);
+        transition-duration: 0.35s;
+        transition-timing-function: ease-in-out;
+            color: #dcdeff;
+            font-weight: 200px;
+    }
+}
+
+/* 버튼 스타일 */
+.btn_profile,.btn_skills,.btn_portfolio,.btn_career {
+    padding: 15px 20px; /* 버튼 크기 조정 */
+    margin: 5px;
+    background-color:#5f64f8;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    color: #fff;
+    transform: translateY(0);
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+    &:hover{
+        transform: translateY(-5%);
+        transition-duration: 0.35s;
+        transition-timing-function: ease-in-out;
+        background-color: #5f64f8;
+    }
+}
+
+.btn:hover {
+    background-color: #c7c7c7;
+}
+
+/* 본문 영역 스타일 */
+.content {
+    padding: 20px;
+    text-align: center;
+    
+    /*
+    transform: translateX(0);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    */
+}
+
+/* 각 섹션 스타일 */
+section {
+    margin: 20px 0; /* 섹션 사이 간격 줄임 */
+    text-align: left; /* 단어를 중앙 정렬 */
+    font-size: 40px;
+    
+}
+
+/* 섹션 내용 스타일 */
+.section-content {
+    padding: 20px;
+    
+}
+h3{
+    margin-left: 15%;
+}
+
+/* 하단 링크 박스 스타일 */
+.link-box {
+    margin-top: 10px; /* 상단 여백을 추가하여 아래로 내림 */
+    text-align: center;
+    padding: 20px; /* 내부 패딩 추가 */
+    margin: 10px;
+}
+
+.link-container_top,.link-container_bottom {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px; /* 글꼴 크기를 유지 */
+    height: 30px;
+    width: 50px;
+}
+.link_instagram{
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px; /* 글꼴 크기를 유지 */
+    height: 30px;
+    width: 60px;
+    text-align: center;
+}
+.link_instagram i {
+    font-size: 30px; /* 아이콘 크기를 유지 */
+    margin-bottom: 10px; /* 아이콘과 글 사이의 간격을 유지 */
+}
+
+.link i {
+    font-size: 30px; /* 아이콘 크기를 유지 */
+    margin-bottom: 10px; /* 아이콘과 글 사이의 간격을 유지 */
+}
+section{
+    color: #A6A8CD;
+}
+.profile{
+    color: #5f64f8;
+    font-size: x-large;
+}
+.profile-Hello{
+    transform: translateY(0);
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+    &:hover{
+            transform: translateY(-5%);
+            transition-duration: 0.35s;
+            transition-timing-function: ease-in-out;
+            color: #8387ff;
+            font-weight: bolder
+        }
+}
+.chart{
+    color: #000000;
+    width: 500px;
+    height: 500px;
+    margin-left: 10%;
+}
+.box{
+    background-color: #5f64f868;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    border: 2px solid #7e7f9a;
+    transform: translateY(0);
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+    &:hover{
+        transform: translateY(-5%);
+        transition-duration: 0.35s;
+        transition-timing-function: ease-in-out;
+        color: #ffe4bf;
+    }
+}
+.mungtaeng{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer{
+    color: #fff;
+    text-align: center;
+}
+.rainCanvas{
+    position: fixed;
+    display: flex;
+    pointer-events: none;
+}
+@media (max-width: 450px){
+    .sidebar{
+        height: 110px;
+        width: 500px;
+        color: #fff;
+    }
+    .name{
+        margin-top: 10px;
+    }
+    .link,.link_instagram{
+        color: #fff;
+        margin-top: 10px;
+    }
+    .content{
+        margin-top: 100px;
+        text-align: left;
+        margin: 0;
+        margin-top: 100px;
+        width: 400px;
+        
+    }
+    .profile{
+        width: 350px;
+        text-align: center;
+        color: #fff;
+    }
+    .btn_profile{
+        position:absolute;
+        width: 70px;
+        height: 30px;
+        padding: 0px 0px;
+        margin-top: 120px;
+        margin-left: 280px;
+        
+    }
+    .btn_skills{
+        position:absolute;
+        width: 70px;
+        height: 30px;
+        padding: 0px 0px;
+        margin-top: 160px;
+        margin-left: 280px;
+        
+    }
+    .btn_portfolio{
+        position:absolute;
+        width: 70px;
+        height: 30px;
+        padding: 0px 0px;
+        margin-left: 280px;
+        margin-top: 200px;
+    }
+    .btn_career{
+        position:absolute;
+        width: 70px;
+        height: 30px;
+        padding: 0px 0px;
+        margin-left: 280px;
+        margin-top: 240px;
+    }
+    .line{
+        display: none;
+        border: 1px solid white;
+        width: 30px;
+        height: 1px;
+    }
+    canvas{
+        margin-left: -10px;
+    }
+    body{
+        width: 450px;
+        overflow-x: hidden;
+    }
+    .name{
+        margin-right: 150px;
+        margin-top: -120px;
+    }
+    .Backend{
+        margin-right: 120px;
+        margin-top: -30px;
+    }
+    .profile-img img{
+        margin-left: -170px;
+        margin-top: -10px;
+        width: 100px;
+        height: 100px;
+    }
+    .link-box{
+        margin-top: -170px;
+        margin-left: 220px;
+    }
+    .link-container_top{
+        margin-top: 40px;
+        margin-bottom: -20px;
+    }
+    section{
+        color: #ffffff;
+    }
+    footer{
+        width: 450px;
+        margin-left: 0px;
+        font-size: 10px;
+    }
+    .side{
+        margin-left: 490px;
+        height: 1px;
+        margin-top: -100px;
+    }
+    .chart{
+        width: 450px;
+        height: 450px;
+    }
+    
+}

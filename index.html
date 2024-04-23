@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자기소개</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- Font Awesome CDN 추가 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="Js/script.js"></script>
+</head>
+<body>
+    <canvas class="rainCanvas" width="1500px" height="1000px"></canvas>
+    <!-- 왼쪽 바 -->
+    <div class="side">
+        <div class="sidebar">
+            <div class="profile-img">
+                <img src="cherry-blossem.jpeg" alt="">
+            </div>
+            <div class="name">
+                <p style="font-size: 19px;">Kim TaeWoo</p>
+            </div>
+            <div class="Backend">
+                <p style="font-size: 18px;">Backend-Developer</p>
+            </div>
+            <div class="line">
+            </div>
+            <!-- 버튼 -->
+            <button class="btn_profile" onclick="scrollToSection('profile')">Profile</button>
+            <button class="btn_skills" onclick="scrollToSection('skills')">Skills</button>
+            <button class="btn_portfolio" onclick="scrollToSection('portfolio')">Portfolio</button>
+            <button class="btn_career" onclick="scrollToSection('career')">Career</button>
+            <!-- 하단 링크 박스 -->
+            <div class="link-box">
+                <div class="link-container_top">
+                    <a class="link" href="https://github.com/taeng0720" target="_blank"><i class="fab fa-github"></i><br>GitHub</a>
+                    <a class="link" href="https://blog.naver.com/taeng0720" target="_blank"><i class="fas fa-blog"></i><br>Blog</a>
+                </div>
+                <div class="link-container_bottom">
+                    <a class="link  " href="https://www.instagram.com/kim_taeng_07/" target="_blank"><i class="fab fa-instagram"></i><br>Insta</a>
+                    <a class="link" href="mailto:xodn0720@naver.com"><i class="far fa-envelope"></i><br>Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- 본문 영역 -->
+    <div class="mainMove">
+    <div class="content">
+        <section id="profile">
+            <h3>Profile</h3>
+        </section>
+        <div class="profile">
+            <br><br><br><br>
+            <h1 class="profile-Hello" style="font-weight: bold;">Hello! <br>I'm Taewoo Kim,</h1>
+            <p class="Introduce">I am a student backend and game developer who is constantly challenging <br>
+                I always try to gain experience and improve my skills <br>
+                through various programming competitions and in-school competitions!</p>
+                
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                
+            </h2>
+        </div>
+        
+        <!-- 스킬 섹션 -->
+        <section id="skills">
+            <h3>Skills</h3>
+        </section>
+        <div class="skills">
+        </div>
+        <canvas class="chart" id="doughnut-chart"  style="height:80vh; width:80vw"></canvas>
+        <br><br><br><br><br><br>
+        
+        <!-- 포트폴리오 섹션 -->
+        <section id="portfolio">
+            <h3>Portfolio</h3>
+        </section>
+        <div class="portfolio">
+        </div>
+        <div class="mungtaeng">
+            <div class="box"  onclick="location.href='https://github.com/ye0jin/SHRIMP_TEST';">
+                <h2>Shrimp_test</h2>
+            </div>
+            <div class="box"><!--온라인저지 구축 끝난 후 넣을 예정입니다-->
+                <h2>GBSW_OnlineJudge</h2>
+            </div>
+        </div>
+        <div class="mungtaeng">
+            <div class="box" onclick="location.href='https://blog.naver.com/PostView.naver?blogId=taeng0720&logNo=223403645218&parentCategoryNo=&categoryNo=54&viewDate=&isShowPopularPosts=false&from=postList';">
+                <h2>~경운기로 시작해봅니다~</h2>
+                <h3 style="margin-left: -2px ;">열심히 준비하는 의성군 축제</h3>
+                <br>
+                <h5>Indevelopment...</h5>
+                
+            </div>
+                <div class="box" onclick="location.href='https://blog.naver.com/taeng0720/223415846791';">
+                <h2>~오늘 밤, 색을 훔치러갑니다~</h2>
+                <h3 style="margin-left: -10px ;">산속 마을속 우아한 움직임</h3>
+                <br>
+                <h5>Indevelopment...</h5>
+            </div>
+        </div>
+        
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <!-- 경험 섹션 -->
+        <section id="career">
+            <h3>Career</h3>
+        </section>
+        <div class="career">
+        </div>
+        <div class="mungtaeng">
+            <div class="box">
+                <h2>SK_Smarteen</h2>
+                <h3 style="margin-left: -10px ;">honorable mention</h3>
+            </div>
+            <div class="box">
+                <h2>Convergence Talent Creative Idea Meetup</h2>
+                <h3 style="margin-left: -10px ;">win a prize</h3>
+            </div>
+        </div>
+        <div class="mungtaeng">
+            <div class="box">
+                <h2>Mossland Hackerthon</h2>
+                <h3 style="margin-left: -10px ;">Passed the 1st round</h3>
+            </div>
+            <div class="box">
+                <h2>24th Appjam</h2>
+                <h3 style="margin-left: -10px ;">the grand prize</h3>
+            </div>
+        </div>
+        <div class="mungtaeng">
+            <div class="box">
+                <h2>LogCon</h2>
+                <h3 style="margin-left: -10px ;">Passed the 1st round</h3>
+            </div>
+            <div class="box">
+                <h2>1일 1안전수칙 공모전</h2>
+                <h3 style="margin-left: -10px ;">win a prize</h3>
+                <br>
+            </div>
+        </div>
+        <div class="mungtaeng">
+            <div class="box">
+                <h2>Rookie challenges</h2>
+                <h3 style="margin-left: -10px ;">win a prize</h3>
+            </div>
+            <div class="box">
+                <h2>SW-AI 융합인재 프로젝트</h2>
+                <h3 style="margin-left: -10px ;">win a prize</h3>
+                <br>
+            </div>
+        </div>
+        <div class="mungtaeng">
+            <div class="box">
+                <h2>25th App jam</h2>
+                <h3 style="margin-left: -10px ;">Excellence Award</h3>
+            </div>
+            <!--
+            <div class="box">
+                <h2>SW-AI 융합인재 프로젝트</h2>
+                <h3 style="margin-left: -10px ;">win a prize</h3>
+                <br>
+            </div>
+            -->
+        </div>
+    </div>
+    <footer>
+        <br><br>
+        <h1>© 2024 TaeWoo. All Rights Reserved.</h1>
+        
+    </footer>
+</div>
+    <script>
+        new Chart(document.getElementById("doughnut-chart"), {
+            type: 'doughnut',
+            data: {
+                labels: ["Unity", "SpringBoot", "Java", "Html","css", "Js", "C", "C#","Cpp"],
+                datasets: [
+                    {
+                        label: "Population (millions)",
+                        backgroundColor: ["#ff8d8d", "#ffcc8d","#ffff8d","#bbff8d","#8dffcc","#8deeff","#8dbbff","#8d98ff","#c28dff"],
+                        data: [20,20,15,13,12,10,8,2,1]
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    
+                    text: 'frequency of use of skills',
+                    fontSize:15,
+                    fontColor:"white"
+                },
+                responsive: false,
+                legend: {
+                    
+                    labels: {
+                        fontColor: "#ababab",
+                        fontSize: 15
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        const canvas = document.querySelector('.rainCanvas');
+        const context = canvas.getContext('2d');
+        const drops = [];
+        const mousePos = { x: 0, y: 0 };
+        let selectedBox; // 클릭된 box를 넣어놓은 변수
+  
+        context.font = 'bold 30px sans-serif';
+  
+        class Drop {
+          constructor(index, x, y, speed, length) {
+            this.index = index;
+            this.x = x;
+            this.y = y;
+            this.speed = speed;
+            this.length = length;
+            this.draw();
+          }
+  
+          draw() {
+            context.beginPath();
+            context.strokeStyle = '#dfdfdf';
+            context.moveTo(this.x, this.y);
+            context.lineTo(this.x, this.y + this.length);
+            context.stroke();
+            context.closePath();
+          }
+        }
+  
+        function render() {
+          context.clearRect(0, 0, canvas.width, canvas.height);
+  
+          drops.forEach((drop) => {
+            drop.y += drop.speed;
+            if (drop.y > canvas.height) {
+              drop.y = 0;
+              drop.x = Math.random() * canvas.width;
+              drop.speed = Math.random() * 7 + 1;
+              drop.length = Math.random() * 10 + 2;
+            }
+  
+            drop.draw();
+          });
+  
+          requestAnimationFrame(render); //반복
+          //console.log(drops);
+        }
+  
+        let tempX, tempY, tempSpeed, tempLength;
+        for (let i = 0; i < 200; i++) {
+          tempX = Math.random() * canvas.width;
+          tempY = Math.random() * canvas.height;
+          tempSpeed = Math.random() * 5 + 1;
+          tempLength = Math.random() * 5 + 2;
+  
+          drops.push(new Drop(i, tempX, tempY, tempSpeed, tempLength));
+        }
+        render();
+      </script>
+</body>
+</html>
