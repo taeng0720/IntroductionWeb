@@ -487,6 +487,10 @@ footer{
         transition-duration: 0.35s;
         transition-timing-function: ease-in-out;
     }
+    .btn_box{
+        position: fixed;
+        margin-left: -380px;
+    }
     .mungtaeng{
         margin-left: 0px;
     }
@@ -643,5 +647,7 @@ footer{
     h5{
         margin-top: -20px;
     }
-    
+    .side{
+        width: 0px;
+    }
 }
