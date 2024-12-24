@@ -1,0 +1,85 @@
+/* 스크롤 컨테이너 스타일 */
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* 세로 스냅 */
+    scroll-behavior: smooth; /* 부드러운 스크롤 */
+    scrollbar-width: none; /* 스크롤바 숨김 (Firefox) */
+    -ms-overflow-style: none; /* 스크롤바 숨김 (IE, Edge) */
+}
+
+/* 크롬 등 웹킷 브라우저에서 스크롤바 숨김 */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* 각 섹션 스타일 */
+.scroll-section {
+    height: 100vh; /* 각 섹션 높이 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* 섹션 시작점에서 스냅 */
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    transition: transform 1s ease-out; /* 부드러운 효과 추가 */
+}
+
+/* 각 섹션 배경 */
+.scroll-section:nth-child(1) { background-color: #111; }
+.scroll-section:nth-child(2) { background-color: #222; }
+.scroll-section:nth-child(3) { background-color: #333; }
+.scroll-section:nth-child(4) { background-color: #444; }
+
+/* 콘텐츠 스타일링 */
+.menu-content, .profile-content, .skills-content, .portfolio-content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px; /* 최대 너비 제한 */
+}
+
+.title .name {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.title .portfolio {
+    font-size: 1.2rem;
+    color: #888;
+    margin-left: 10px;
+}
+
+.subtitle h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #fff;
+}
+
+.highlight-game {
+    color: #00ff7f;
+}
+
+/* 섹션 콘텐츠 */
+.profile-content h2,
+.skills-content h2,
+.portfolio-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-content p,
+.portfolio-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.skills-content ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.skills-content li {
+    margin: 10px 0;
+}

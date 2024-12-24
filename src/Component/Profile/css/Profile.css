@@ -1,0 +1,248 @@
+/* 전체 레이아웃 */
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* 이미지와 내용 간격 */
+    padding: 50px;
+    min-height: 100vh; /* 화면 높이의 100% */
+    background-color: #000; /* 배경색 */
+    color: #fff; /* 텍스트 색상 */
+    scroll-snap-align: start; /* 섹션 스냅 */
+    scroll-behavior: smooth; /* 부드러운 스크롤 */
+    box-sizing: border-box;
+}
+.typing-effect-container {
+    height: 62px; /* 고정된 높이 */
+    color : #8b44ff;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    margin-left: 50px;
+    justify-content: flex-start; /* 좌측 정렬 */
+    overflow: hidden; /* 넘치는 부분 숨김 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.typing-container {
+    height: 50px; /* 텍스트 컨테이너의 높이를 고정 */
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center;
+    font-size: 24px;
+    overflow: hidden; /* 혹시 모를 오버플로우 방지 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+/* 프로필 이미지 */
+.profile-img img {
+    width: 500px;
+    border-radius: 50%; /* 원형 이미지 */
+    object-fit: cover;
+    border: 3px solid #444; /* 얇은 테두리 추가 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.profile-img{
+    width : 1000px;
+}
+/* 프로필 내용 */
+.profile-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+
+/* 타이핑 애니메이션 */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* 텍스트가 위로 올라가며 사라지는 애니메이션 */
+@keyframes slideUpIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* 프로필 제목 */
+.profile-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #00d8ff; /* 청록색 강조 */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(30) forwards, blink-caret 0.75s step-end infinite;
+    border-right: 3px solid #00d8ff; /* 타이핑 커서 효과 */
+    position: relative;
+    opacity: 1;
+}
+
+/* 프로필 설명 */
+.profile-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd; /* 부드러운 회색 톤 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column; /* 모바일에서 수직 정렬 */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .profile-image img {
+        max-width: 200px;
+    }
+
+    .profile-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        white-space: nowrap; /* 텍스트 한 줄로 */
+        overflow: hidden; /* 넘치는 텍스트 숨김 */
+        border-right: 2px solid #333; /* 커서 효과 */
+        animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    .profile-description {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .profile-title {
+        font-size: 1.8rem;
+    }
+
+    .profile-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* 전체 섹션 */
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    min-height: 100vh;
+    background-color: #000; /* 배경 색상 */
+    color: #fff; /* 글자 색상 */
+    font-family: "Arial", sans-serif;
+}
+
+/* 왼쪽 이미지 스타일 */
+.profile-left {
+    position: relative;
+    max-width: 500px;
+    margin-top : 100px;
+    margin-right: 200px;
+    margin-left : -100px;
+}
+
+.profile-left img {
+    width: 100%;
+    border-radius: 10px; /* 둥근 모서리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* MORE PROFILE 스타일 */
+.more-profile {
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    background-color: #00d8ff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* 오른쪽 프로필 스타일 */
+.profile-right {
+    max-width: 500px;
+    width : 700px;
+    margin-right : 100px;
+}
+
+.profile-header {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.profile-header .highlight {
+    color: #00d8ff;
+}
+
+.profile-header .fade {
+    color: #aaa;
+    font-weight: normal;
+}
+
+.typing-effect {
+    font-size: 1.8rem;
+    color: #00d8ff;
+    white-space: nowrap;
+    border-right: 3px solid #00d8ff;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* 프로필 세부 사항 */
+.profile-details {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-details li {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.profile-details li strong {
+    display: inline-block;
+    width: 100px;
+    color: #00d8ff;
+}

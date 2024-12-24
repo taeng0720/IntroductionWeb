@@ -1,0 +1,11 @@
+.contact-section{
+    height: 300px; /* 각 섹션 높이 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* 섹션 시작점에서 스냅 */
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    transition: transform 1s ease-out; /* 부드러운 효과 추가 */
+}

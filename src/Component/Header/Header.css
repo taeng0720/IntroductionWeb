@@ -1,0 +1,100 @@
+/* 
+src/Component/Header/Header.jsx
+Create 2024.12.16 Kim Taewoo
+End ??? Kim Taewoo
+*/
+@font-face {
+    font-family: "BlackHanSans-Regular";
+    font-weight: 900;
+  font-display: swap;
+    src: url("../../fonts/BlackHanSans-Regular.ttf") format("truetype");
+  }
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height : 50px;
+    width: 100%;
+    font-family: "BlackHanSans-Regular";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+}
+
+
+.header__left {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.header__nav li {
+    margin: 0 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header__nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sns__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sns__dropdown li {
+    padding: 5px 20px;
+    white-space: nowrap;
+}
+
+.sns__dropdown li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.sns__dropdown li a:hover {
+    color: #ffcc00;
+}
+
+.sns:hover .sns__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
